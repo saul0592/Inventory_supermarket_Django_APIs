@@ -29,3 +29,6 @@ def descargar_dataset(request):
         return JsonResponse({'error': 'Archivo no encontrado'}, status=404)
     except Exception as e:
         return JsonResponse({'error': str(e)}, status=500)
+
+def log_in_interface(request):
+    return render(request, 'log_in/log_in.html')
